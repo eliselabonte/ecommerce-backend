@@ -13,8 +13,9 @@ router.get('/', async (req, res) => {
     // does this res.json need a .status(200)?
     res.json(tags)
   }
-  catch{
-    res.status(500).json(err)
+  catch{ err => {
+      res.status(500).json(err)
+    }
   }
 });
 

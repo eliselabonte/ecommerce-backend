@@ -23,8 +23,9 @@ router.get('/:id', async (req, res) => {
     res.json(category)
   }
   // is a 404 error appropriate here?
-  catch{
+  catch { err =>{
     res.status(404).json(err)
+      }
   }
 });
 
