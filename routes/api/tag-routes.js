@@ -10,7 +10,6 @@ router.get('/', async (req, res) => {
     const tags = await tag.findAll({
       include: [{model: Product}]
     })
-    // does this res.json need a .status(200)?
     res.json(tags)
   }
   catch{ err => {
@@ -27,7 +26,6 @@ router.get('/:id', async (req, res) => {
     })
     res.json(tags)
   }
-  // is a 404 error appropriate here?
   catch{
     res.status(404).json(err)
   }
