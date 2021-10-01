@@ -1,38 +1,32 @@
-const { Product } = require('../models');
+const { Tag } = require('../models');
 
-const productData = [
+const tagData = [
   {
-    product_name: 'Plain T-Shirt',
-    price: 14.99,
-    stock: 14,
-    category_id: 1,
+    tag_name: 'rock music',
   },
   {
-    product_name: 'Running Sneakers',
-    price: 90.0,
-    stock: 25,
-    category_id: 5,
+    tag_name: 'pop music',
   },
   {
-    product_name: 'Branded Baseball Hat',
-    price: 22.99,
-    stock: 12,
-    category_id: 4,
+    tag_name: 'blue',
   },
   {
-    product_name: 'Top 40 Music Compilation Vinyl Record',
-    price: 12.99,
-    stock: 50,
-    category_id: 3,
+    tag_name: 'red',
   },
   {
-    product_name: 'Cargo Shorts',
-    price: 29.99,
-    stock: 22,
-    category_id: 2,
+    tag_name: 'green',
+  },
+  {
+    tag_name: 'white',
+  },
+  {
+    tag_name: 'gold',
+  },
+  {
+    tag_name: 'pop culture',
   },
 ];
 
-const seedProducts = () => Product.bulkCreate(productData);
+const seedTags = () => Tag.bulkCreate(tagData);
 
-module.exports = seedProducts;
+module.exports = seedTags;

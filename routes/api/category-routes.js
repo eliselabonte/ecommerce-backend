@@ -8,6 +8,8 @@ router.get('/', async (req, res) => {
       include: [{model: Product}]
     }).then((categories) => {
       res.json(categories)
+      // console.log(categories, '<<<<<<')
+      // return('<div>')
     }).catch((err)=>  {
       res.status(500).json(err)
     })
